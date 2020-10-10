@@ -16,13 +16,44 @@ with open(csvpath) as csvfile:
 
     month_count =0
     net_total= 0
+    value = 0
+    next_value = 0
+    previous = 0 
+    total_change =0
+    first_time = True 
+    greatestincrease = 0
+    greatestdecrease = 9999999999
+    
+
 
     for row in csvreader:
         month_count = month_count + 1 
         net_total = net_total + int(row[1])
-    print(month_count)
-    print(net_total)
 
+        if not first_time:
+            change=int(row[1])- previous
+            total_change = total_change + change
+
+            #if the current change is great then previous change now grestest change = current one.
+            if change > greatestincrease:
+                greatestincrease = change
+            if change < greatestdecrease:
+                greatestdecrease = change
+                
+            
+        previous=int(row[1])
+        first_time= False
+
+        
+
+
+
+
+print(month_count)
+print(net_total)
+print(total_change/(month_count-1))
+print(greatestincrease)
+print(greatestdecrease)
         
 
 
