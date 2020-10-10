@@ -40,6 +40,7 @@ with open(csvpath) as csvfile:
             if change > greatestincrease:
                 greatestincrease = change
                 greatestmonthinc = row[0]
+            #if the current change is less then the previous change the greatest decrease now equals the change
             if change < greatestdecrease:
                 greatestdecrease = change
                 greatestmonthdec = row[0]
@@ -60,20 +61,20 @@ print(greatestmonthdec, + greatestdecrease)
 
 
     
-# # Specify the file to write to
-# output_path = os.path.join("..", "analysis", "results.csv")
+# Specify the file to write to
+output_path = os.path.join("analysis", "results.txt")
 
 
-# # Open the file using "write" mode. Specify the variable to hold the contents
-# with open(output_path, 'results') as csvfile:
+# Open the file using "write" mode. Specify the variable to hold the contents
+f = open(output_path, 'w')
+f.write("Financial Analysis \n")
+f.write("---------------------------- \n")
+f.write(f"Total Months: {month_count}\n")
+f.write(f"Total: ${net_total} \n")
+f.write(f"Average  Change: $ {total_change/(month_count-1)}\n")
+f.write(f"Greatest Increase in Profits: {greatestmonthinc} (${greatestincrease})\n")
+f.write(f"Greatest Decrease in Profits: {greatestmonthdec} (${greatestdecrease})")
 
-#     # Initialize csv.writer
-#     csvwriter = csv.writer(csvfile, delimiter=',')
 
-#     # Write the first row (column headers)
-#     csvwriter.writerow(['First Name', 'Last Name', 'SSN'])
-
-#     # Write the second row
-#     csvwriter.writerow(['Caleb', 'Frost', '505-80-2901'])
-
+   
 
