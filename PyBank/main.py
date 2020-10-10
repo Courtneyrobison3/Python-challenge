@@ -24,6 +24,8 @@ with open(csvpath) as csvfile:
     greatestincrease = 0
     greatestdecrease = 9999999999
     
+    
+    
 
 
     for row in csvreader:
@@ -37,23 +39,22 @@ with open(csvpath) as csvfile:
             #if the current change is great then previous change now grestest change = current one.
             if change > greatestincrease:
                 greatestincrease = change
+                greatestmonthinc = row[0]
             if change < greatestdecrease:
                 greatestdecrease = change
-                
+                greatestmonthdec = row[0]
             
         previous=int(row[1])
         first_time= False
 
         
 
-
-
-
 print(month_count)
 print(net_total)
 print(total_change/(month_count-1))
-print(greatestincrease)
-print(greatestdecrease)
+print(greatestmonthinc, + greatestincrease)
+print(greatestmonthdec, + greatestdecrease)
+
         
 
 
