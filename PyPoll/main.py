@@ -21,17 +21,20 @@ with open(csvpath) as csvfile:
 # determine the number of votes cast by counting the number of voter IDs
     for row in csvreader:
         votes = votes + 1
-
-    
         
         #loop through and find the 
 
         if row[2] not in candidates:
-           # candidates[row[2]] = 1
+           
             candidates.update({row[2] : 1})
         else:
             candidates[row[2]] += 1
              
-    
-print(candidates)
+    print(candidates)
+    for key in candidates:
+        Vpercent = (candidates[key]/votes)*100
+        print(Vpercent)
+
 print(int(votes))
+        
+    
