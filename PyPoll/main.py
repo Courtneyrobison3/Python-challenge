@@ -31,9 +31,19 @@ with open(csvpath) as csvfile:
             candidates[row[2]] += 1
              
     print(candidates)
+    Cname = ""
+    winner = 0
     for key in candidates:
         Vpercent = (candidates[key]/votes)*100
         print(Vpercent)
+        #canditate with most votes wins.
+        
+        if candidates[key] > winner:
+            winner = candidates[key]
+            Cname =  key
+    print(Cname + str(winner))
+            
+        
 
 print(int(votes))
         
