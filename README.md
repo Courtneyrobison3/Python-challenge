@@ -1,4 +1,5 @@
 # Python-challenge
+
 ## PyBank Challenge
 In this challenge, we have been tasked with creating a Python script for analyzing the financial records for a company. 
 We have been given a set of financial data called budget_data.csv. The dataset is composed of two columns: Date and Profit/Losses. 
@@ -32,6 +33,7 @@ election based on popular vote.
 ## Results
 
 ##PyBank
+
 ####Financial Analysis 
 ---------------------------- 
 Total Months: 86
@@ -45,6 +47,7 @@ Greatest Increase in Profits: Feb-2012 ($1926159)
 Greatest Decrease in Profits: Sep-2013 ($-2196167)
 
 ##PyPoll
+
 ####Election Results
 -------------------------
 
