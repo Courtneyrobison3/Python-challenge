@@ -33,14 +33,15 @@ with open(csvpath) as csvfile:
     print(candidates)
     Cname = ""
     winner = 0
-    for key in candidates:
-        Vpercent = (candidates[key]/votes)*100
+    for name in candidates:
+        Vpercent = (candidates[name]/votes)*100
         print(Vpercent)
+        percent = print(Vpercent)
         #canditate with most votes wins.
         
-        if candidates[key] > winner:
-            winner = candidates[key]
-            Cname =  key
+        if candidates[name] > winner:
+            winner = candidates[name]
+            Cname =  name
     print(Cname  + str(winner))
 
     # Specify the file to write to
@@ -52,10 +53,10 @@ f.write("Election Results \n")
 f.write("---------------------------- \n")
 f.write(f"Total Votes: {votes}\n")
 f.write("---------------------------- \n")
-f.write(f"Khan: ${net_total} \n")
-f.write(f"Average  Change: $ {total_change/(month_count-1)}\n")
-f.write(f"Greatest Increase in Profits: {greatestmonthinc} (${greatestincrease})\n")
-f.write(f"Greatest Decrease in Profits: {greatestmonthdec} (${greatestdecrease})")
+f.write(f"{percent} \n")
+# f.write(f"Average  Change: $ {total_change/(month_count-1)}\n")
+# f.write(f"Greatest Increase in Profits: {greatestmonthinc} (${greatestincrease})\n")
+f.write(f"Winner: {(Cname)} ")
 
 
 

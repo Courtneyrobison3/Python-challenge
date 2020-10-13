@@ -17,15 +17,11 @@ with open(csvpath) as csvfile:
     month_count =0
     net_total= 0
     value = 0
-    next_value = 0
     previous = 0 
     total_change =0
     first_time = True 
     greatestincrease = 0
     greatestdecrease = 9999999999
-    
-    
-    
 
 
     for row in csvreader:
