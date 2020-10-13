@@ -9,7 +9,7 @@ dataset, the net total amount of "Profit/Losses" over the entire period, the ave
 over the entire period, the greatest increase in profits (date and amount) over the entire period, and the greatest decrease in losses 
 (date and amount) over the entire period.
 
-##PyPoll Challenge
+## PyPoll Challenge
 here, we've been tasked with helping a small, rural town modernize its vote counting process.
 We have been given a set of poll data called election_data.csv. The dataset is composed of three columns: Voter ID, County, and Candidate. 
 we have created a Python script that analyzes the votes and calculates each of the following; The total number of votes cast, A complete list 
@@ -23,8 +23,32 @@ election based on popular vote.
 
 ## Files
 
+PyBank Budget Data
+
+https://github.com/Courtneyrobison3/Python-challenge/blob/main/PyBank/Resources/budget_data.csv
 
 
+PyBank Python Code
+
+https://github.com/Courtneyrobison3/Python-challenge/blob/main/PyBank/main.py
+
+
+PyBank Results
+
+https://github.com/Courtneyrobison3/Python-challenge/blob/main/PyBank/analysis/results.txt
+
+
+
+PyPoll Election Data
+
+https://github.com/Courtneyrobison3/Python-challenge/blob/main/PyPoll/Resources/election_data.csv
+
+
+PyPoll Code
+
+
+
+PyPoll Results
 
 
 
@@ -32,9 +56,9 @@ election based on popular vote.
 
 ## Results
 
-##PyBank
+## PyBank
 
-####Financial Analysis 
+###### Financial Analysis 
 ---------------------------- 
 Total Months: 86
 
@@ -46,9 +70,9 @@ Greatest Increase in Profits: Feb-2012 ($1926159)
 
 Greatest Decrease in Profits: Sep-2013 ($-2196167)
 
-##PyPoll
+## PyPoll
 
-####Election Results
+###### Election Results
 -------------------------
 
 Total Votes: 3521001
@@ -69,7 +93,11 @@ Winner: Khan
 
 
 ## Execution
-to execute, main.py needs be in a folder with another called "Resources" which will contain the budget_data.csv file. 
+
+To execute PyBank, main.py needs be in a folder with another called "Resources" which will contain the budget_data.csv file. 
+Run main.py  This will create an analysis folder and the results.txt file.
+
+To execute PyPoll, main.py needs be in a folder with another called "Resources" which will contain the election_data.csv file. 
 Run main.py  This will create an analysis folder and the results.txt file.
 
 
