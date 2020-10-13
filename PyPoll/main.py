@@ -29,7 +29,7 @@ with open(csvpath) as csvfile:
             candidates.update({row[2] : 1})
         else:
             candidates[row[2]] += 1
-             
+    print(int(votes))         
     print(candidates)
     Cname = ""
     winner = 0
@@ -41,10 +41,27 @@ with open(csvpath) as csvfile:
         if candidates[key] > winner:
             winner = candidates[key]
             Cname =  key
-    print(Cname + str(winner))
+    print(Cname  + str(winner))
+
+    # Specify the file to write to
+    output_path = os.path.join("analysis", "results.txt")
+
+    # Open the file using "write" mode. Specify the variable to hold the contents
+f = open(output_path, 'w')
+f.write("Election Results \n")
+f.write("---------------------------- \n")
+f.write(f"Total Votes: {votes}\n")
+f.write("---------------------------- \n")
+f.write(f"Khan: ${net_total} \n")
+f.write(f"Average  Change: $ {total_change/(month_count-1)}\n")
+f.write(f"Greatest Increase in Profits: {greatestmonthinc} (${greatestincrease})\n")
+f.write(f"Greatest Decrease in Profits: {greatestmonthdec} (${greatestdecrease})")
+
+
+
             
         
 
-print(int(votes))
+
         
     
